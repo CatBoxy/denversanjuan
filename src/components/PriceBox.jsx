@@ -1,7 +1,10 @@
 import React from 'react';
+import useDate from '../hooks/useDate';
 
-function PriceBox({name, compra, venta}) {
+function PriceBox({name, compra, venta, createdAt}) {
   const nameUp = name.toUpperCase();
+  const [ formattedDate ] = useDate({ createdAt: createdAt });
+
   return (
     <>
       <div className='priceContainer'>
@@ -19,7 +22,7 @@ function PriceBox({name, compra, venta}) {
           </div>
         </div>
         <div className='boxFooter'>
-          <p className='footerText'>fecha de actualizacion</p>
+          <p className='footerText'>{formattedDate}</p>
         </div>
         {/* <p>
           {`Moneda: ${name} compra: ${compra} venta: ${venta}`}

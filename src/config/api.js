@@ -1,5 +1,5 @@
 import { initializeApp } from 'firebase/app'
-import { getFirestore, collection, getDocs, updateDoc, doc } from 'firebase/firestore'
+import { getFirestore, collection, getDocs, updateDoc, doc, serverTimestamp } from 'firebase/firestore'
 
 const firebaseConfig = {
   apiKey: "AIzaSyDBMrOBeBpYqgM4SOTIY3RUiCOi7Q1ONL0",
@@ -37,7 +37,8 @@ export const updateCurrencyValues = async (values) => {
 
     updateDoc(docRef, {
       compra: values.compra,
-      venta: values.venta
+      venta: values.venta,
+      createdAt: serverTimestamp()
     })
     return
   } catch (err) {

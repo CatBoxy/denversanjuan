@@ -94,6 +94,7 @@ p, h2 {
 
 .footerText {
   margin: 0 0 0 0;
+  padding-bottom: 1rem;
 }
 
 @media (min-width : 480px) {
