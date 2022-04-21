@@ -3,6 +3,8 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './screens/Home';
 import Admin from './screens/Admin';
 import NotFound from './screens/NotFound';
+import Login from './screens/Login';
+import RequireAuth from './components/RequireAuth';
 
 function MyRoutes() {
 
@@ -17,8 +19,15 @@ function MyRoutes() {
       <Route
         path='/dashboard'
         element={
-          <Admin/>
+          <RequireAuth>
+            <Admin/>
+          </RequireAuth>
         } />
+        <Route
+          path='/login'
+          element={
+            <Login/>
+          } />
       <Route
         path='*'
         element= {

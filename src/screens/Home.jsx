@@ -1,23 +1,7 @@
 import React from 'react';
-import useCurrency from '../hooks/useCurrency'
+import useCurrency from '../hooks/useCurrency';
+import PriceBox from '../components/PriceBox';
 
-function Display({ currency }) {
-  return (
-    <>
-      <div>
-        <p>
-          {`Moneda: ${currency[0].name} compra: ${currency[0].compra} venta: ${currency[0].venta}`}
-        </p>
-        <p>
-          {`Moneda: ${currency[1].name} precio: ${currency[1].compra} venta: ${currency[1].venta}`}
-        </p>
-        <p>
-          {`Moneda: ${currency[2].name} precio: ${currency[2].compra} venta: ${currency[2].venta}`}
-        </p>
-      </div>
-    </>
-  )
-}
 
 function Home() {
   const { currency, isLoading} = useCurrency();
@@ -29,3 +13,15 @@ function Home() {
 }
 
 export default Home;
+
+function Display({ currency }) {
+  return (
+    <>
+      <div>
+        <PriceBox name={currency[0].name} compra={currency[0].compra} venta={currency[0].venta} />
+        <PriceBox name={currency[1].name} compra={currency[1].compra} venta={currency[1].venta}/>
+        <PriceBox name={currency[2].name} compra={currency[2].compra} venta={currency[2].venta}/>
+      </div>
+    </>
+  )
+}
