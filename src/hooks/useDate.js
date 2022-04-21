@@ -7,10 +7,15 @@ export default function useDate({ createdAt }) {
     const formatDate = () => {
       const date = createdAt.toDate();
       const year = new Date(date).getFullYear()
-      const month = new Date(date).getMonth()
-      const day = new Date(date).getDay()
+      const month = new Date(date).getMonth() + 1
+      const day = new Date(date).getDate()
       const hours = new Date(date).getHours()
       const minutes = new Date(date).getMinutes()
+      console.log(date)
+      console.log('month')
+      console.log(month)
+      console.log('day')
+      console.log(day)
 
       const newDate = day + '/' + month + '/' + year + ' - ' + hours + ':' + minutes + ' hs';
       setFormattedDate(newDate)

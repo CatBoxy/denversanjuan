@@ -1,13 +1,16 @@
 import React from 'react';
 import LoginForm from '../components/LoginForm';
 
-function Login(props) {
+function Login() {
 
 
   return (
-    <div>
-     <LoginForm/>
-    </div>
+    <>
+      <div className='logInContainer'>
+        <h2>LogIn</h2>
+        <LoginForm/>
+      </div>
+    </>
   );
 }
 

@@ -266,7 +266,6 @@ input, select, textarea{
 
 .inputErrorContainer {
   width: 125px;
-  
 }
 
 .inicioButton {
@@ -286,4 +285,35 @@ input, select, textarea{
 .inicioButton:hover {
   background-color: #290076;
   cursor: pointer;
+}
+
+/* ============== LogIn ============= */
+
+.logInContainer {
+  background-color: #350099;
+  width: 90%;
+  margin: 2rem auto;
+  padding: 1rem;
+  border-radius: 1rem;
+  max-width: 450px;
+}
+
+.logInContainer h2 {
+  margin-bottom: 1rem;
+}
+
+.logInInput {
+  background-color: #290076;
+  border: none;
+  border-radius: 1rem;
+  padding: .83rem;
+}
+
+.loginInputContainer {
+  margin-bottom: .5rem;
+  min-height: 65px;
+}
+
+.logInButton {
+  padding: .5rem 1rem;
 }
