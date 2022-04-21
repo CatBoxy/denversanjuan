@@ -1,17 +1,20 @@
 import './App.css'
 import MyRoutes from './MyRoutes.jsx';
-
+import { AuthProvider } from './context/authProvider';
+import GlobalHeader from './components/GlobalHeader';
 
 function App() {
   
   return (
-    <div className="App">
-      <div className="mainContent">
-        <MyRoutes />
+    <AuthProvider>
+      <div className="App">
+        <div className="mainContent">
+          <GlobalHeader/>
+          <MyRoutes />
+        </div>
       </div>
-      {/* {currency.length === 0 ? <p>Loading</p> : <p>{`${currency[0].name}`}</p>} */}
-    </div>
+    </AuthProvider>
   )
 }
 
-export default App
+export default App;
