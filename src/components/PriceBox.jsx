@@ -1,24 +1,25 @@
 import React from 'react';
 
 function PriceBox({name, compra, venta}) {
+  const nameUp = name.toUpperCase();
   return (
     <>
       <div className='priceContainer'>
         <div className='boxHeader'>
-          <h2>{name}</h2>
+          <h2>{nameUp}</h2>
         </div>
         <div className='boxContent'>
           <div className='compra'>
             <h3>Compra</h3>
-            <p>{compra}</p>
+            <p className='price'>${compra}</p>
           </div>
           <div className='venta'>
             <h3>Venta</h3>
-            <p>{venta}</p>
+            <p className='price'>${venta}</p>
           </div>
         </div>
         <div className='boxFooter'>
-          <p>fecha de actualizacion</p>
+          <p className='footerText'>fecha de actualizacion</p>
         </div>
         {/* <p>
           {`Moneda: ${name} compra: ${compra} venta: ${venta}`}

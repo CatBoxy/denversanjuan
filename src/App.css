@@ -17,15 +17,14 @@ button {
   margin: auto;
   width: 90%;
 }
- /* ====== header ======== */
+ /* ======================= header ======== */
+
 .navbar {
   padding: 1rem 0;
   background-color: #350099;
 }
 
 .navItems {
-  /* display: flex;
-  justify-content: center; */
   width: 90%;
   margin: auto;
   display: grid;
@@ -57,17 +56,42 @@ button {
   height: 3rem;
   margin: 0 auto;
 }
- /* ======== */
-.mainTitle {
-  color: white;
-}
+ /* =================== Price boxes ======================= */
 
 .priceContainer {
   background-color: #350099;
   border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  border-top: 5px solid #cccc33;
+  margin-top: 1.5rem;
+}
+
+.boxHeader {
+  background-color: #290076;
+  border-radius: 1rem 1rem 0 0;
+  padding: .5rem;
 }
 
 .boxContent {
   display: flex;
   justify-content: space-around;
+  margin-top: 1rem;
+}
+
+h3 {
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+
+p, h2 {
+  color: #cccc33;
+}
+
+.price {
+  font-size: 2rem;
+  margin-top: 0;
+}
+
+.footerText {
+  margin: 0 0 0 0;
 }
