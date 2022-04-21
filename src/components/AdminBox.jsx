@@ -1,10 +1,9 @@
 import React from 'react';
 import useDate from '../hooks/useDate';
+import MyForm from '../components/MyForm';
 
-function PriceBox({name, compra, venta, createdAt}) {
+function AdminBox({name, compra, venta, createdAt, setIsLoading, updatePrices, currencyId}) {
   const nameUp = name.toUpperCase();
-  const [ formattedDate ] = useDate({ createdAt: createdAt });
-
   return (
     <>
       <div className='priceContainer'>
@@ -21,12 +20,12 @@ function PriceBox({name, compra, venta, createdAt}) {
             <p className='price'>${venta}</p>
           </div>
         </div>
-        <div className='boxFooter'>
-          <p className='footerText'>{formattedDate}</p>
-        </div>
+        <section className='adminForm'>
+          <MyForm setIsLoading={setIsLoading} updatePrices={updatePrices} id={currencyId}/>
+        </section>
       </div>
     </>
   );
 }
 
-export default PriceBox;
+export default AdminBox;

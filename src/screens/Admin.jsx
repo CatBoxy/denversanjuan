@@ -1,30 +1,8 @@
 import React from 'react';
 import useCurrency from '../hooks/useCurrency'
-import MyForm from '../components/MyForm';
-
-function Display({ currency, updatePrices, setIsLoading }) {
-  const usdId = currency[0].id;
-  const eurId = currency[1].id;
-  const usdtId = currency[2].id;
-  return (
-    <>
-      <div>
-        <p>
-          {`Moneda: ${currency[0].name} compra: ${currency[0].compra} venta: ${currency[0].venta}`}
-        </p>
-        <MyForm setIsLoading={setIsLoading} updatePrices={updatePrices} id={usdId}/>
-        <p>
-          {`Moneda: ${currency[1].name} compra: ${currency[1].compra} venta: ${currency[1].venta}`}
-        </p>
-        <MyForm setIsLoading={setIsLoading} updatePrices={updatePrices} id={eurId}/>
-        <p>
-          {`Moneda: ${currency[2].name} compra: ${currency[2].compra} venta: ${currency[2].venta}`}
-        </p>
-        <MyForm setIsLoading={setIsLoading} updatePrices={updatePrices} id={usdtId}/>
-      </div>
-    </>
-  )
-}
+import AdminBox from '../components/AdminBox';
+import { Link } from 'react-router-dom';
+import { useAuthState } from '../context/authProvider';
 
 function Admin() {
   const { currency, isLoading, updatePrices, setIsLoading } = useCurrency();
@@ -36,3 +14,53 @@ function Admin() {
 }
 
 export default Admin;
+
+function Display({ currency, updatePrices, setIsLoading }) {
+  const { logOut } = useAuthState();
+  const usdId = currency[0].id;
+  const eurId = currency[1].id;
+  const usdtId = currency[2].id;
+  return (
+    <>
+      <div className='bodyDisplay'>
+        <AdminBox
+          id='usd'
+          setIsLoading={setIsLoading}
+          updatePrices={updatePrices} 
+          currencyId={usdId} 
+          name={currency[0].name} 
+          compra={currency[0].compra} 
+          venta={currency[0].venta} 
+          createdAt={currency[0].createdAt}
+        />
+        <AdminBox 
+          id='eur'
+          setIsLoading={setIsLoading}
+          updatePrices={updatePrices} 
+          currencyId={eurId} 
+          name={currency[1].name} 
+          compra={currency[1].compra} 
+          venta={currency[1].venta} 
+          createdAt={currency[1].createdAt}
+          />
+        <AdminBox 
+          id='usdt'
+          setIsLoading={setIsLoading}
+          updatePrices={updatePrices} 
+          currencyId={usdtId} 
+          name={currency[2].name} 
+          compra={currency[2].compra} 
+          venta={currency[2].venta} 
+          createdAt={currency[2].createdAt}
+          />
+      </div>
+      <section className='buttonSection'>
+        <Link to="/" className='wspText'>
+          <button className='inicioButton' onClick={logOut}>
+            LogOut 
+          </button>
+        </Link>
+      </section>
+    </>
+  )
+}

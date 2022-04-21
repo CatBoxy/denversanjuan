@@ -105,6 +105,38 @@ p, h2 {
 
 @media (min-width : 767px) {
   .bodyDisplay {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    gap: 1rem;
+    margin-top: 3rem;
+  }
+
+  #usd {
+    flex: 0 0 33%;
+  }
+
+  #eur {
+    flex: 0 0 33%;
+  }
+
+  #usdt {
+    flex: 0 0 100%;
+  }
+
+  .price {
+    font-size: 2rem;
+  }
+  
+  .priceContainer {
+    min-width: 300px;
+  }
+}
+
+@media (min-width : 1024px) {
+  .bodyDisplay {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
@@ -134,8 +166,8 @@ p, h2 {
 }
 
 @media (min-width : 1280px) {
-  .priceContainer {
-    margin-top: 10rem;
+  .bodyDisplay {
+    margin-top: 6rem;
   }
 }
 
@@ -177,4 +209,81 @@ p, h2 {
   .buttonSection {
     margin: 5rem;
   }
+}
+
+/* ================== admin form ===================  */
+
+.adminForm {
+  padding-bottom: 1rem;
+}
+
+.inputContainer {
+  display: flex;
+  justify-content: space-around;
+  min-height: 73px;
+}
+
+.priceInput {
+  width: 100px;
+  background-color: #290076;
+  border: none;
+  border-radius: 1rem;
+  padding: .83rem;
+  margin-bottom: .5rem;
+}
+
+.button-checkBox {
+  margin: 1rem 0;
+}
+
+.button {
+  border: none;
+  padding: .5rem;
+  background-color: #290076;
+  border-radius: 2rem;
+  color:  #ffffff;
+  cursor: pointer;
+  transition: color 300ms ease-in-out;
+}
+
+.button:hover {
+  color:  #cccc33;
+  cursor: pointer;
+}
+
+.error {
+  color: #ffffff;
+}
+
+input, select, textarea{
+    color: #ffffff;
+}
+
+::placeholder {
+  color: #ffffff;
+  opacity: 1; 
+}
+
+.inputErrorContainer {
+  width: 125px;
+  
+}
+
+.inicioButton {
+  border: none;
+  background-color: #350099;
+  color: #ffffff;
+  font-size: 1.5rem;
+  width: 200px;
+  padding: 1rem;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  transition: background-color 200ms ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.inicioButton:hover {
+  background-color: #290076;
+  cursor: pointer;
 }

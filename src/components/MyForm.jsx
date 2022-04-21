@@ -19,36 +19,37 @@ export default function MyForm({updatePrices, setIsLoading, id}) {
           }}
           validationSchema={Yup.object({
             compra: Yup.number()
-              .min(1, 'Este campo debe contener al menos 1 número')
-              .positive('Este campo debe ser un número positivo')
-              .required('Este campo debe contener al menos 1 número'),
+              .min(1, 'Ingrese mas de 1 numero')
+              .positive('Debe ser positivo')
+              .required('Campo requerido'),
             venta: Yup.number()
-              .min(1, 'Este campo debe contener al menos 1 número')
-              .positive('Este campo debe ser un número positivo')
-              .required('Este campo debe contener al menos 1 número'),
+              .min(1, 'Ingrese mas de 1 numero')
+              .positive('Debe ser positivo')
+              .required('Campo requerido'),
           })}
           onSubmit={async (values) => {
             handleSubmit(values);
           }}
         >
-
           <Form className="form">
-            <div>
-              <PriceInput
-                name="compra"
-                type="number"
-                placeholder="Nuevo valor compra"
-              />
-            </div>
-            <div>
-              <PriceInput
-                name="venta"
-                type="number"
-                placeholder="Nuevo valor venta"
-              />
-              <div className='button-checkBox'>
-                <button className="button" type="submit">Actualizar precios</button>
+            <div className='inputContainer'>
+              <div className='inputErrorContainer'>
+                <PriceInput
+                  name="compra"
+                  type="number"
+                  placeholder="Compra"
+                />
               </div>
+              <div className='inputErrorContainer'>
+                <PriceInput
+                  name="venta"
+                  type="number"
+                  placeholder="Venta"
+                />
+              </div>
+            </div>
+            <div className='button-checkBox'>
+                <button className="button" type="submit">Actualizar precios</button>
             </div>
           </Form>
 
@@ -65,7 +66,7 @@ export default function MyForm({updatePrices, setIsLoading, id}) {
    return (
      <>
        <label htmlFor={props.id || props.name}>{label}</label>
-       <input className="text-input" {...field} {...props} />
+       <input className="text-input priceInput" {...field} {...props} />
        {meta.touched && meta.error ? (
          <div className="error">{meta.error}</div>
        ) : null}
