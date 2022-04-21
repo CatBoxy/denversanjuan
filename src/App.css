@@ -95,3 +95,85 @@ p, h2 {
 .footerText {
   margin: 0 0 0 0;
 }
+
+@media (min-width : 480px) {
+  .price {
+  font-size: 2.5rem;
+  }
+}
+
+@media (min-width : 767px) {
+  .bodyDisplay {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 16px;
+    grid-row-gap: 0px;
+  }
+
+  #usd {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+
+  #eur {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+
+  #usdt {
+    grid-area: 1 / 3 / 2 / 4;
+  }
+
+  .price {
+    font-size: 2rem;
+  }
+  
+  .priceContainer {
+    margin-top: 3rem;
+  }
+}
+
+@media (min-width : 1280px) {
+  .priceContainer {
+    margin-top: 10rem;
+  }
+}
+
+/* =================== button wsp =============== */
+
+.buttonSection {
+  margin: 2rem;
+}
+
+.wspText {
+  display: flex;
+  justify-content: center;
+}
+
+.wspButton {
+  border: none;
+  background-color: #25d366;
+  color: #ffffff;
+  font-size: 1.5rem;
+  width: 200px;
+  padding: 1rem;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  transition: background-color 200ms ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.wspButton:hover {
+  background-color: #075e54;
+  cursor: pointer;
+}
+
+.wspIcon {
+  margin-right: .5rem;
+}
+
+@media (min-width : 767px) {
+  .buttonSection {
+    margin: 5rem;
+  }
+}
