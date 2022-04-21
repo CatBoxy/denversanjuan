@@ -8,9 +8,9 @@
   padding-bottom: 1rem;
 }
 
-button {
+/* button {
   font-size: calc(10px + 2vmin);
-}
+} */
 
 .home {
   margin-top: 2rem;
@@ -62,12 +62,11 @@ button {
   background-color: #350099;
   border-radius: 1rem;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-  border-top: 5px solid #cccc33;
   margin-top: 1.5rem;
 }
 
 .boxHeader {
-  background-color: #290076;
+  background-color: #cccc33;
   border-radius: 1rem 1rem 0 0;
   padding: .5rem;
 }
@@ -75,20 +74,32 @@ button {
 .boxContent {
   display: flex;
   justify-content: space-around;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
+}
+
+.h3Container {
+  background-color: #cccc33;
+  margin-bottom: 1rem;
+  padding: .2rem .5rem;
+  border-radius: 2rem;
 }
 
 h3 {
-  color: #ffffff;
-  font-size: 1.5rem;
+  color: #350099;
+  font-family: Visby Bold;
 }
 
-p, h2 {
-  color: #cccc33;
+p {
+  color: #ffffff;
+}
+
+h2 {
+  color: #350099;
+  font-family: Visby Bold;
 }
 
 .price {
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-top: 0;
 }
 
@@ -99,7 +110,7 @@ p, h2 {
 
 @media (min-width : 480px) {
   .price {
-  font-size: 2.5rem;
+  font-size: 2rem;
   }
 }
 
@@ -239,15 +250,16 @@ p, h2 {
 .button {
   border: none;
   padding: .5rem;
-  background-color: #290076;
+  background-color: #cccc33;
   border-radius: 2rem;
-  color:  #ffffff;
+  color:  #350099;
   cursor: pointer;
+  font-family: Visby Bold;
+  font-size: medium;
   transition: color 300ms ease-in-out;
 }
 
 .button:hover {
-  color:  #cccc33;
   cursor: pointer;
 }
 
@@ -265,13 +277,14 @@ input, select, textarea{
 }
 
 .inputErrorContainer {
-  width: 125px;
+  width: 131px;
 }
 
 .inicioButton {
   border: none;
-  background-color: #350099;
-  color: #ffffff;
+  background-color: #cccc33;
+  color: #350099;
+  font-family: Visby Bold;
   font-size: 1.5rem;
   width: 200px;
   padding: 1rem;
@@ -283,7 +296,7 @@ input, select, textarea{
 }
 
 .inicioButton:hover {
-  background-color: #290076;
+  /* background-color: #290076; */
   cursor: pointer;
 }
 
@@ -293,13 +306,19 @@ input, select, textarea{
   background-color: #350099;
   width: 90%;
   margin: 2rem auto;
-  padding: 1rem;
   border-radius: 1rem;
   max-width: 450px;
 }
 
-.logInContainer h2 {
+.logInTitle {
+  background-color: #cccc33;
+  border-radius: 1rem 1rem 0 0;
   margin-bottom: 1rem;
+  padding: .5rem 0;
+}
+
+.logInBody{ 
+  padding: 1rem;
 }
 
 .logInInput {

@@ -7,8 +7,12 @@ function Login() {
   return (
     <>
       <div className='logInContainer'>
-        <h2>LogIn</h2>
-        <LoginForm/>
+        <div className='logInTitle'>
+          <h2>Ingreso</h2>
+        </div>
+        <div className='logInBody'>
+          <LoginForm/>
+        </div>
       </div>
     </>
   );

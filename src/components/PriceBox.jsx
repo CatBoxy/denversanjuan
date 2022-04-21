@@ -13,11 +13,15 @@ function PriceBox({name, compra, venta, createdAt}) {
         </div>
         <div className='boxContent'>
           <div className='compra'>
-            <h3>Compra</h3>
+            <div className='h3Container'>
+              <h3>COMPRA</h3>
+            </div>
             <p className='price'>${compra}</p>
           </div>
           <div className='venta'>
-            <h3>Venta</h3>
+            <div className='h3Container'>
+              <h3>VENTA</h3>
+            </div>
             <p className='price'>${venta}</p>
           </div>
         </div>

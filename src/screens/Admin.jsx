@@ -57,7 +57,7 @@ function Display({ currency, updatePrices, setIsLoading }) {
       <section className='buttonSection'>
         <Link to="/" className='wspText'>
           <button className='inicioButton' onClick={logOut}>
-            LogOut 
+            Salir
           </button>
         </Link>
       </section>
