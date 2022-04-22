@@ -3,12 +3,12 @@ import { getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut } from
 import { initializeApp } from 'firebase/app';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDBMrOBeBpYqgM4SOTIY3RUiCOi7Q1ONL0",
-  authDomain: "denver-sanjuan.firebaseapp.com",
-  projectId: "denver-sanjuan",
-  storageBucket: "denver-sanjuan.appspot.com",
-  messagingSenderId: "336235159528",
-  appId: "1:336235159528:web:b6d4403a44fe37ce5cce5d"
+  apiKey: process.env.API_KEY,
+  authDomain: process.env.AUTH_DOMAIN,
+  projectId: process.env.PROJECT_ID,
+  storageBucket: process.env.STORAGE_BUCKET,
+  messagingSenderId: process.env.SENDER_ID,
+  appId: process.env.APP_ID
 };
 
 initializeApp(firebaseConfig);
