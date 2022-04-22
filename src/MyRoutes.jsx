@@ -17,19 +17,19 @@ function MyRoutes() {
         }
       />
       <Route
-        path='/dashboard'
+        path="dashboard"
         element={
           <RequireAuth>
             <Admin/>
           </RequireAuth>
         } />
         <Route
-          path='/login'
+          path="/login"
           element={
             <Login/>
           } />
       <Route
-        path='*'
+        path="*"
         element= {
           <NotFound/>
         }
