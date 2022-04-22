@@ -17,7 +17,7 @@ function MyRoutes() {
         }
       />
       <Route
-        path="dashboard"
+        path="/dashboard"
         element={
           <RequireAuth>
             <Admin/>
