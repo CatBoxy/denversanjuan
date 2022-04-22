@@ -2,8 +2,7 @@ import React from 'react';
 import useCurrency from '../hooks/useCurrency';
 import PriceBox from '../components/PriceBox';
 import { BsWhatsapp } from "react-icons/bs";
-
-
+import Loader from '../components/Loader';
 
 function Home() {
   const { currency, isLoading} = useCurrency();
@@ -11,7 +10,9 @@ function Home() {
   return (
     <>
     <div className='home'>
-      {isLoading ? <span>Loading...</span> : <Display currency={currency} />}
+      {isLoading 
+        ? <Loader />
+        : <Display currency={currency} />}
     </div>
     </>
   );

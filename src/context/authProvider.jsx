@@ -25,7 +25,6 @@ export const AuthProvider = ({children}) => {
   useEffect(()=> {
     onAuthStateChanged(auth, (user) => {
       user != null ? setIsLoggedin(true) : setIsLoggedin(false);
-      console.log('user status changed:', user)
     })
   },[])
 

@@ -3,12 +3,13 @@ import useCurrency from '../hooks/useCurrency'
 import AdminBox from '../components/AdminBox';
 import { Link } from 'react-router-dom';
 import { useAuthState } from '../context/authProvider';
+import Loader from '../components/Loader';
 
 function Admin() {
   const { currency, isLoading, updatePrices, setIsLoading } = useCurrency();
   return (
     <div className='home'>
-      {isLoading ? <span>Loading...</span> : <Display currency={currency} updatePrices={updatePrices} setIsLoading={setIsLoading}/>}
+      {isLoading ? <Loader/> : <Display currency={currency} updatePrices={updatePrices} setIsLoading={setIsLoading}/>}
     </div>
   );
 }
