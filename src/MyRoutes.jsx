@@ -4,7 +4,7 @@ import Home from './screens/Home';
 import Admin from './screens/Admin';
 import NotFound from './screens/NotFound';
 import Login from './screens/Login';
-import RequireAuth from './components/RequireAuth';
+import RequireAuth from './components/requireAuth';
 
 function MyRoutes() {
 
