@@ -21,6 +21,10 @@ function Home() {
 export default Home;
 
 function Display({ currency }) {
+  let whatsappMsg = 'https://wa.me/?text=https://denversanjuan.com/';
+  if (window.screen.width >= 767) {
+    whatsappMsg = "https://web.whatsapp.com/send?text=https://denversanjuan.com/";
+  }
   return (
     <>
       <div className='bodyDisplay'>
@@ -30,7 +34,7 @@ function Display({ currency }) {
       </div>
       <section className='buttonSection'>
         <div className='buttonWrapper'>
-            <a href="https://web.whatsapp.com/send?text=https://denversanjuan.com/" className='wspText' target="_blank" rel="noreferrer">
+            <a href={whatsappMsg} className='wspText' target="_blank" rel="noreferrer">
               <button className='wspButton'>
                 <BsWhatsapp className='wspIcon'/>
                 Compartir 
