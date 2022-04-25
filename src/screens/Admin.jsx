@@ -56,11 +56,13 @@ function Display({ currency, updatePrices, setIsLoading }) {
           />
       </div>
       <section className='buttonSection'>
-        <Link to="/" className='wspText'>
-          <button className='inicioButton' onClick={logOut}>
-            Salir
-          </button>
-        </Link>
+        <div className='buttonWrapper'>
+          <Link to="/" className='wspText'>
+            <button className='inicioButton' onClick={logOut}>
+              Salir
+            </button>
+          </Link>
+        </div>
       </section>
     </>
   )
