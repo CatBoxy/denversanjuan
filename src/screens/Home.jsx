@@ -29,12 +29,14 @@ function Display({ currency }) {
         <PriceBox id="usdt" name={currency[2].name} compra={currency[2].compra} venta={currency[2].venta} createdAt={currency[2].createdAt}/>
       </div>
       <section className='buttonSection'>
-        <a className='wspText'>
-          <button className='wspButton'>
-            <BsWhatsapp className='wspIcon'/>
-            Compartir 
-          </button>
-        </a>
+        <div className='buttonWrapper'>
+            <a href="https://web.whatsapp.com/send?text=https://denversanjuan.com/" className='wspText' target="_blank" rel="noreferrer">
+              <button className='wspButton'>
+                <BsWhatsapp className='wspIcon'/>
+                Compartir 
+              </button>
+          </a>
+        </div>
     </section>
     </>
   )
